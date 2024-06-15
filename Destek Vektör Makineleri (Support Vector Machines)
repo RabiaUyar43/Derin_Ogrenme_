@@ -1,0 +1,10 @@
+from sklearn.svm import SVC
+# SVM modelini eğit
+model = SVC(kernel='linear')
+model.fit(X_train, y_train)
+# Tahmin yap
+y_pred = model.predict(X_test)
+# Sonuçları değerlendir
+print("Support Vector Machines")
+print(classification_report(y_test, y_pred))
+print("Accuracy:", accuracy_score(y_test, y_pred))
